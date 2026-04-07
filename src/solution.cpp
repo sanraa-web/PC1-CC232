@@ -23,7 +23,10 @@ int evalRPN(const std::vector<std::string>& tokens) {
                 st.push(a / b);
             }
         } else {
-            st.push(std::stoi(token));
+            int num = std::stoi(token);
+            if (num < -200 || num > 200)
+                throw std::out_of_range("Numero fuera del rango [-200, 200]");
+            st.push(num);
         }
     }
 
