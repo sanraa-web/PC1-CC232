@@ -3,7 +3,7 @@
 #include <string>
 #include <stdexcept>
 
-int evalRPN(std::vector<std::string>& tokens) {
+int evalRPN(const std::vector<std::string>& tokens) {
     Stack<int> st;
 
     for (const std::string& token : tokens) {

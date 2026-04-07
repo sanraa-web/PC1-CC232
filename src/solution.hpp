@@ -1,6 +1,7 @@
 #ifndef SOLUTION_HPP
 #define SOLUTION_HPP
 #include <vector>
+#include <string>
 #include <stdexcept>
 
 template <typename T>
@@ -15,6 +16,8 @@ public:
 private:
     std::vector<T> data_;
 };
+
+int evalRPN(const std::vector<std::string>& tokens);
 
 // Implementacion del stack
 
